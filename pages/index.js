@@ -34,7 +34,7 @@ export default function Home() {
         
         <Widget>
             <Widget.Header>
-              <h1>The legend of zelda</h1>
+              <h1>Quizz de Anime</h1>
             </Widget.Header>
           <Widget.Content>
               <p>lorem ipsum dolor sit</p>
@@ -49,7 +49,7 @@ export default function Home() {
         </Widget>
         <Footer/>
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/yurihallan"/>
+      <GitHubCorner projectUrl="https://github.com/yurihallan/aluraquiz-base"/>
     </QuizBackground>
   )
 }

@@ -1,5 +1,5 @@
 {
-    "bg":"https://articles.gamerheadquarters.com/images/top10/movies/10.jpg",
+    "bg":"https://gruposdezap.com/wp-content/uploads/2018/06/animes.jpeg",
     "title":"Título do Quiz",
     "description":"Descrição do seu quiz aqui",
     "questions":[
@@ -33,9 +33,9 @@
     ],
     "theme":{
         "colors":{
-            "primary": "#4CAF50",
+            "primary": "#49599a",
             "secondary": "#FF9800",
-            "mainBg":"#1C1814",
+            "mainBg":"#000a12",
             "contrastText":"#FFFFFF",
             "wrong":"#FF5722",
             "success":"#4CAF50"
