@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const InputBase = styled.input`
@@ -13,14 +14,31 @@ const InputBase = styled.input`
   margin-bottom: 25px;
 `;
 
-export default function Input() {
-  // eslint-disable-next-line react/prop-types
-//   const { name } = props;
+// eslint-disable-next-line react/prop-types
+export default function Input({ onChange, placeholder, ...props }) {
+  //   const { name } = props;
   return (
     <div>
       <InputBase
-        value="exemplo"
+        onChange={onChange}
+        placeholder={placeholder}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
       />
     </div>
   );
 }
+
+Input.defaultProps = {
+  // eslint-disable-next-line react/default-props-match-prop-types
+  value: '',
+};
+
+// eslint-disable-next-line react/no-typos
+Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  value: PropTypes.string.isRequired,
+};
