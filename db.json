@@ -4,15 +4,15 @@
     "description":"Descrição do seu quiz aqui",
     "questions":[
         {
-            "image":"https://placehold.it/400x400",
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShaIB7-moy38sF1Iez4nYVIGfkvMKqV_P6zg&usqp=CAU",
             "title":"Questão numero 01",
-            "description":"Descrição da questão numero #01",
+            "description":"Qual é o nome desse anime?",
             "answer":1,
             "alternatives":[
-                "Alternativa A",
-                "Alternativa B",
-                "Alternativa C",
-                "Alternativa D"
+                "Dragon Ball",
+                "Cavalheiros do Zodíaco",
+                "Yu-Gi-Oh",
+                "Yu Yu Hakusho"
             ]
         },
         {
