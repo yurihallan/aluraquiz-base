@@ -1,7 +1,7 @@
 {
     "bg":"https://static.quizur.com/i/b/57a976435eb1c8.2771877657a9764346f233.76119332.jpg",
-    "title":"Título do Quiz",
-    "description":"Descrição do seu quiz aqui",
+    "title":"Anime Quiz",
+    "description":"Será que você lembra desses animes? Venha testar",
     "questions":[
         {
             "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShaIB7-moy38sF1Iez4nYVIGfkvMKqV_P6zg&usqp=CAU",
@@ -15,16 +15,53 @@
                 "Yu Yu Hakusho"
             ]
         },
+        
         {
-            "image":"https://placehold.it/400x400",
+            "image":"https://cdn.ome.lt/EiJeEbDrj8TwgkKaVPKOJmTEZhM=/570x0/smart/uploads/conteudo/fotos/CAPA-yu-gi-oh_UKcxlLo.png",
             "title":"Questão numero 02",
-            "description":"Descrição da questão numero #02",
+            "description":"Qual o nome do personagem principal?",
             "answer":2,
             "alternatives":[
-                "Alternativa A",
-                "Alternativa B",
-                "Alternativa C",
-                "Alternativa D"
+                "Yusuki Urameshi",
+                "Konami matsumoto",
+                "Yugi Muto",
+                "Kazu Takahashi"
+            ]
+        },
+        {
+            "image":"https://geekblog.com.br/wp-content/uploads/2020/11/animes-antigos-veja-10-animes-que-surgiram-antes-dos-anos-2000-1.jpg",
+            "title":"Questão numero 03",
+            "description":"Como o Yusuke Urameshi morreu no anime YU-YU-Hakusho?",
+            "answer":3,
+            "alternatives":[
+                "Foi atropelado por uma moto",
+                "Foi atropelado por um caminhão",
+                "Foi atropelado por um ônibus",
+                "Foi atropelado por uma carro"
+            ]
+        },
+        {
+            "image":"https://i.pinimg.com/originals/4d/84/f5/4d84f57594e3ee680c2d03103d51c422.jpg",
+            "title":"Questão numero 04",
+            "description":"Como é o nome da joia que todos os Yokai estão atrás?",
+            "answer":0,
+            "alternatives":[
+                "Joia de Quatro Almas",
+                "Joia de Oito Almas",
+                "Joia das Almas puras",
+                "Joia de Todas as Almas"
+            ]
+        },
+        {
+            "image":"https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc-f:fbcover/wp-content/uploads/2020/05/legiao_uyBgzfKO_ewH.png.jpeg",
+            "title":"Questão numero 05",
+            "description":"Como é o nome da besta (Biju) de nove caudas que o naruto possui?",
+            "answer":2,
+            "alternatives":[
+                "Matatabi",
+                "Gyuki",
+                "Kurama",
+                "Kokuo"
             ]
         }
     ],

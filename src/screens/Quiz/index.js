@@ -1,19 +1,26 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizContainer from '../src/components/QuizContainer';
-import GitHubCorner from '../src/components/GithubCorner';
-import Footer from '../src/components/Footer';
-import Button from '../src/components/Button';
-import AlternativesForm from '../src/components/AlternativesForm';
+import { Lottie } from '@crello/react-lottie';
+
+// import db from '../../../db.json';
+import Widget from '../../components/Widget';
+import QuizBackground from '../../components/QuizBackground';
+import QuizLogo from '../../components/QuizLogo';
+import QuizContainer from '../../components/QuizContainer';
+import GitHubCorner from '../../components/GithubCorner';
+import Footer from '../../components/Footer';
+import Button from '../../components/Button';
+import AlternativesForm from '../../components/AlternativesForm';
+import BackLinkArrow from '../../components/BackLinkArrow';
+import loadingAnimation from './animations/loading-bar2.json';
 
 function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         Tela de Resultado
       </Widget.Header>
 
@@ -43,7 +50,6 @@ function ResultWidget({ results }) {
                 ? 'Acertou'
                 : 'Errou'}
             </li>
-
           ))}
         </ul>
       </Widget.Content>
@@ -54,12 +60,18 @@ function ResultWidget({ results }) {
 function LoadingWidget() {
   return (
     <Widget>
-      <Widget.Header>
+      {/* <Widget.Header>
         Carregando...
-      </Widget.Header>
+      </Widget.Header> */}
 
-      <Widget.Content>
-        [Desafio do loading]
+      <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
+        <Lottie
+          height="200px"
+          width="200px"
+          speed="2"
+          className="lottie-container basic"
+          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+        />
       </Widget.Content>
     </Widget>
   );
@@ -81,9 +93,8 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        <h3>
-          {`Pergunta ${questionIndex + 1} de ${totalQuestions} `}
-        </h3>
+        <BackLinkArrow href="/" />
+        {`Pergunta ${questionIndex + 1} de ${totalQuestions} `}
       </Widget.Header>
 
       <img
@@ -113,7 +124,7 @@ function QuestionWidget({
               onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
-            }, 3 * 1000);
+            }, 1 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -160,13 +171,14 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
-  const totalQuestions = db.questions.length;
+  const totalQuestions = externalQuestions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const bg = externalBg;
 
   function addResult(result) {
     setResults([
@@ -192,7 +204,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={bg}>
 
       <QuizContainer>
         <QuizLogo />
